@@ -132,3 +132,12 @@ export default app;
 ```
 Done!
 Dokumentasi yang kita buat telah dapat diakses melalui localhost:3000/api-docs-sum dan kita juga dapat melakukan pemanggilan API pada endpoint swagger tersebut.
+## [Contributing](CONTRIBUTING.md)
+
+## More on OpenApi & Swagger
+
+- https://swagger.io
+- https://www.openapis.org
+- [OpenApi Documentation](https://swagger.io/docs/)
+- [OpenApi Specification](http://swagger.io/specification/)
+- [Related projects](docs/related-projects.md)

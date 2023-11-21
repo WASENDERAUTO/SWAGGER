@@ -2,9 +2,9 @@
 
 # Langkah 1 : 
 Install swagger-ui-express package
-'''bash
+```bash
 npm install swagger-ui-express
-'''
+```
 # langkah 2 : 
 
 Tambahkan json swagger untuk membuat dokumentasi API pada endpoint /sum yang telah dibuat sebelumnya

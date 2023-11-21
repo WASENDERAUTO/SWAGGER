@@ -1,11 +1,58 @@
 # Instalasi Swagger pada NodeJs
 
 ## Langkah 1 : 
+Install Swagger JSDoc menggunakan npm:
+```bash
+npm install swagger-jsdoc --save
+
+```
+## langkah 2 : 
+Konfigurasi Swagger JSDoc:
+```javascript
+const swaggerJSDoc = require('swagger-jsdoc');
+
+const options = {
+  swaggerDefinition: {
+    info: {
+      title: 'Your API',
+      version: '1.0.0',
+      description: 'Your API description',
+    },
+  },
+  apis: ['./path/to/your/routes/*.js'], // Ganti dengan path ke file-file Anda
+};
+
+const swaggerSpec = swaggerJSDoc(options);
+
+module.exports = swaggerSpec;
+
+```
+## Langkah 3 : 
 Install swagger-ui-express package
 ```bash
 npm install swagger-ui-express
 ```
-## langkah 2 : 
+Dalam file aplikasi Express Anda:
+
+```javascript
+const express = require('express');
+const swaggerSpec = require('./swagger'); // Sesuaikan dengan path file Anda
+const swaggerUi = require('swagger-ui-express');
+
+const app = express();
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+// ... definisikan rute Anda ...
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+```
+
+## langkah 4 : 
 
 Tambahkan json swagger untuk membuat dokumentasi API pada endpoint /sum yang telah dibuat sebelumnya
 ```json
@@ -113,7 +160,7 @@ Tambahkan json swagger untuk membuat dokumentasi API pada endpoint /sum yang tel
   }
 }
 ``` 
-## Langkah 3
+## Langkah 5 :
 Lakukan indexing file swagger pada file app.js agar dapat diakses pada endpoint yang kita tentukan.
 ```Js
 import express from 'express';

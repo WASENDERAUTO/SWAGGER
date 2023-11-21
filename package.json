@@ -1,0 +1,36 @@
+{
+  "name": "nodejs-swagger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bayusatmoko/nodejs-swagger.git"
+  },
+  "keywords": [
+    "swagger"
+  ],
+  "author": "Maulana Bayu Satmoko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bayusatmoko/nodejs-swagger/issues"
+  },
+  "homepage": "https://github.com/bayusatmoko/nodejs-swagger#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/runtime": "^7.7.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "swagger-ui-express": "^4.1.4"
+  }
+}

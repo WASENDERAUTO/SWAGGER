@@ -1,11 +1,11 @@
-## Instalasi Swagger pada NodeJs
+# Instalasi Swagger pada NodeJs
 
-# Langkah 1 : 
+## Langkah 1 : 
 Install swagger-ui-express package
 ```bash
 npm install swagger-ui-express
 ```
-# langkah 2 : 
+## langkah 2 : 
 
 Tambahkan json swagger untuk membuat dokumentasi API pada endpoint /sum yang telah dibuat sebelumnya
 ```json
@@ -113,7 +113,7 @@ Tambahkan json swagger untuk membuat dokumentasi API pada endpoint /sum yang tel
   }
 }
 ``` 
-# Langkah 3
+## Langkah 3
 Lakukan indexing file swagger pada file app.js agar dapat diakses pada endpoint yang kita tentukan.
 ```Js
 import express from 'express';

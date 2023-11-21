@@ -112,4 +112,23 @@ Tambahkan json swagger untuk membuat dokumentasi API pada endpoint /sum yang tel
     }
   }
 }
+``` 
+# Langkah 3
+Lakukan indexing file swagger pada file app.js agar dapat diakses pada endpoint yang kita tentukan.
+```Js
+import express from 'express';
+const sumRouter = require('./routes/sum');
+import bodyParser from 'body-parser';
+const swaggerUi = require('swagger-ui-express');
+const swaggerSumDocument = require ('../swaggerSumDocument');
+
+const app = express();
+
+app.use(bodyParser.json());
+app.use('/sum', sumRouter);
+app.use('/api-docs-sum', swaggerUi.serve, swaggerUi.setup(swaggerSumDocument));
+
+export default app;
 ```
+Done!
+Dokumentasi yang kita buat telah dapat diakses melalui localhost:3000/api-docs-sum dan kita juga dapat melakukan pemanggilan API pada endpoint swagger tersebut.

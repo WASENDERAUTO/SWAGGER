@@ -1,4 +1,4 @@
-# Instalasi Swagger pada NodeJs
+# Berikut adalah langkah-langkah umum untuk membuat Swagger pada proyek JavaScript dan PHP
 
 ## Langkah 1 : 
 Install Swagger JSDoc menggunakan npm:

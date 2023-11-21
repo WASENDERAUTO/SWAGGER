@@ -1007,5 +1007,8 @@
         "node": "^12.20.0 || >=14"
       }
     }
+  },
+  "dependencies": {
+    "swagger-jsdoc": "^6.2.8"
   }
 }
